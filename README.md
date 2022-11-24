@@ -180,7 +180,7 @@ To summarize, in this iteration your goal is to create `/movies` route that will
 
   
 
-![image](https://user-images.githubusercontent.com/23629340/36986832-240fe492-209b-11e8-94de-a7334af41076.png)
+![image](https://imgur.com/nFFH2O8.png)
 
   
 
