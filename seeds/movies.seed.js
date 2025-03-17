@@ -1,3 +1,8 @@
+const mongoose = require("mongoose")
+const Movie = require("../models/Movie.model")
+
+const MONGO_URI = 'mongodb+srv://yerkoarcegalaz:Brd7tkNL2GATAMxX@openbootcamp.8xxrw.mongodb.net/?retryWrites=true&w=majority&appName=openbootcamp'
+
 const movies = [
     {
       title: "A Wrinkle in Time",
@@ -83,7 +88,17 @@ const movies = [
 
 
 // Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
-
-  
-
-// ... your code here
+mongoose
+  .connect(MONGO_URI)
+  .then(() => {
+    console.log("Connected to the database")
+    return Movie.deleteMany()
+  })
+  .then(() => {
+    return Movie.insertMany(movies)
+  })
+  .then((moviesFromDB) => {
+    console.log(`Seeded ${moviesFromDB.length} movies`)
+    return mongoose.connection.close()
+  })
+  .catch((err) => console.log(err))
