@@ -3,16 +3,6 @@ body {
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
-  background-image: url('/images/cinema.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background-attachment: fixed;
-  min-height: 100vh;
-  z-index: -1;
 }
 
 a {
@@ -25,6 +15,10 @@ a {
   position: absolute;
   left: 50vw;
   width: 35vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container-home {
@@ -33,7 +27,7 @@ a {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/images/fondo.jpg');
+  background-image: url('/images/cinema.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,15 +49,11 @@ a {
   border-radius: 30px;
   padding: 20px 30px;
   margin: 5px 0px;
+  text-decoration: none;
 }
 
 .btn-home:hover {
   background-color: #63acce;
   color: black;
   cursor: pointer;
-}
-
-.form-home {
-  display: flex;
-  justify-content: center;
 }

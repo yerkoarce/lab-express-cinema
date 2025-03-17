@@ -4,7 +4,7 @@ const Movie = require('../models/Movie.model')
 
 router.get('/', (req, res, next) => {
   Movie.find()
-  .then(movies => res.render('index.hbs', {movies}))
+  .then(movies => res.render('movies.hbs', {movies}))
   .catch(err => next(err))
 })
 
